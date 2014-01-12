@@ -28,7 +28,7 @@ dependencies {
      def mockitoVersion  = "1.9.5"
      def festAssertVersion = "1.4"
      def logbackVersion = "1.0.13"
-
+	compile project(":blogEntity")
     compile("org.slf4j:slf4j-api:$slf4jVersion")
     compile("org.slf4j:slf4j-ext:$slf4jVersion")
     compile("ch.qos.logback:logback-classic:$logbackVersion")
@@ -37,7 +37,6 @@ dependencies {
     testCompile("org.mockito:mockito-all:$mockitoVersion")   
     testCompile("junit:junit:$junitVersion")
 }
-
 
 sourceSets {
     intTest
@@ -67,16 +66,3 @@ sourceSets {
     }
 }
 
-findbugsMain.reports {
-    xml.enabled false
-    html.enabled true
-}
-
-findbugsTest{
-    enabled = false
-}
-
-findbugsTest.reports {
-    xml.enabled false
-    html.enabled true
-}

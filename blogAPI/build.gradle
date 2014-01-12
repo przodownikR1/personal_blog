@@ -66,17 +66,3 @@ sourceSets {
 
     }
 }
-
-findbugsMain.reports {
-    xml.enabled false
-    html.enabled true
-}
-
-findbugsTest{
-    enabled = false
-}
-
-findbugsTest.reports {
-    xml.enabled false
-    html.enabled true
-}
