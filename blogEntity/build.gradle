@@ -1,25 +1,6 @@
-apply plugin: "groovy"
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'maven'
-apply plugin: 'findbugs'
-apply plugin: 'project-report'
-apply plugin: 'pmd'
-apply plugin: 'scala'
-apply plugin: 'application'
-apply plugin: 'build-dashboard'
-apply plugin: 'codenarc'
+displayName = "blogEntity"
+description = "Domain model for blog application"
 
-applicationDefaultJvmArgs = ["-Dfile.encoding=UTF=8"]
-libsDirName = './target'
-
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
-
-repositories {
-   mavenLocal()
-   mavenCentral()
-}
 
 dependencies {
      def slf4jVersion = "1.7.5"
@@ -39,44 +20,3 @@ dependencies {
 }
 
 
-sourceSets {
-    intTest
-    main {
-        java {
-            srcDir 'src/main/java'
-        }
-        scala {
-            srcDir 'src/main/scala'
-        }
-        resources {
-            srcDir 'src/main/resources'
-        }
-
-    }
-    test {
-        java {
-            srcDir 'src/test/java'
-        }
-        scala {
-            srcDir 'src/test/scala'
-        }
-        resources {
-            srcDir 'src/test/resources'
-        }
-
-    }
-}
-
-findbugsMain.reports {
-    xml.enabled false
-    html.enabled true
-}
-
-findbugsTest{
-    enabled = false
-}
-
-findbugsTest.reports {
-    xml.enabled false
-    html.enabled true
-}
