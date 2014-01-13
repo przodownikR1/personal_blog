@@ -119,12 +119,13 @@ task listJars << {
 	configurations.compile.each { File file -> println file.name }
 }
 
-task printProps << {
-	description 'Show application properties.' 
-	//println application.name
-	//println application.version
-	//println application.env
-	println System.properties['system']
+task showProperties {
+	description 'Show application properties.'
+	doLast {		
+	   println "Version: $applicationVersion"
+	   println "Application name: $applicationName"
+	   println "Application enviroment: $applicationEnv"
+	 }
 }
 
 findbugsMain.reports {
