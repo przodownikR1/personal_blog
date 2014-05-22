@@ -3,13 +3,7 @@ displayName = "blogCore"
 description = "All service and business for blog application"
 
 dependencies {
-     def slf4jVersion = "1.7.5"
-     def junitVersion = "4.11"
-     def hamcrestVersion = "1.3"
-     def mockitoVersion  = "1.9.5"
-     def festAssertVersion = "1.4"
-     def logbackVersion = "1.0.13"
-     def springSecurityVersion = "3.2.4.RELEASE"
+  
 	 
 	compile project(":blogDao")
 	compile project(":blogIntegration")
