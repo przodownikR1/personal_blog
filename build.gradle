@@ -5,7 +5,6 @@ apply plugin: 'maven'
 apply plugin: 'findbugs'
 apply plugin: 'project-report'
 apply plugin: 'pmd'
-apply plugin: 'scala'
 apply plugin: 'application'
 apply plugin: 'build-dashboard'
 apply plugin: 'codenarc'
@@ -17,8 +16,8 @@ applicationDefaultJvmArgs = ["-Dfile.encoding=UTF=8"]
 libsDirName = './target'
 
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 
 repositories {
@@ -64,6 +63,13 @@ dependencies {
     compile ("org.springframework:spring-context:${springVersion}")
     compile ("org.springframework:spring-orm:${springVersion}")
     compile ("org.springframework:spring-tx:${springVersion}")
+    compile ("org.springframework.security:spring-security-core:${springSecurityVersion}")
+    compile ("org.springframework.security:spring-security-web:${springSecurityVersion}")
+    compile ("org.springframework.security:spring-security-config:${springSecurityVersion}")
+
+   compile ("org.springframework.security:spring-security-ldap:${springSecurityVersion}")
+   compile ("org.springframework.security:spring-security-acl:${springSecurityVersion}")
+   compile ("org.springframework.security:spring-security-openid:${springSecurityVersion}")
 
     testCompile ("org.springframework:spring-test:${springVersion}")
 

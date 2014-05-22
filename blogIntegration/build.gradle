@@ -16,6 +16,20 @@ dependencies {
     compile("org.slf4j:slf4j-ext:$slf4jVersion")
     compile("ch.qos.logback:logback-classic:$logbackVersion")
     compile("ch.qos.logback:logback-core:$logbackVersion")
+    
+    compile("org.apache.cxf:cxf-rt-frontend-jaxws:${cxfVersion}")
+    compile("org.apache.cxf:cxf-rt-transports-http:${cxfVersion}")
+    compile("org.apache.cxf:cxf-rt-ws-security:${cxfVersion}")
+    compile("org.apache.cxf:cxf-rt-ws-policy:${cxfVersion}")
+    
+    compile("org.apache.camel:camel-core:$camelVersion")
+    compile("org.apache.camel:camel-test:$camelVersion")
+    compile("org.apache.camel:camel-cxf:$camelVersion")
+    compile("org.apache.camel:camel-jaxb:camelVersion")
+    compile("org.apache.camel:camel-spring:$camelVersion")
+    compile("org.apache.camel:camel-jaxb:$camelVersion")
+    
+    
     testCompile("org.hamcrest:hamcrest-all:$hamcrestVersion")
     testCompile("org.mockito:mockito-all:$mockitoVersion")   
     testCompile("junit:junit:$junitVersion")

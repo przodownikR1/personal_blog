@@ -7,8 +7,8 @@ ext {
       
       slf4jVersion = "1.7.7"
       logbackVersion = "1.0.13"
-      
-      springVersion = "4.0.4.RELEASE"
+      springSecurityVersion ="3.2.4.RELEASE"
+      springVersion = "4.0.5.RELEASE"
       hibernateVersion = "4.3.5.Final"
       springDataJPAVersion = "1.4.4.RELEASE"
       javaxValidationVersion = "1.1.0.Final"
@@ -29,5 +29,5 @@ ext {
       javaVersion = "1.8"
 
       camelVersion  = "2.13.0"
-      cxfVersion = "2.7.8"
+      cxfVersion = "3.0.0"
 }

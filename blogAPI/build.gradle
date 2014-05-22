@@ -2,6 +2,5 @@ applicationDefaultJvmArgs = ["-Dfile.encoding=UTF=8"]
 libsDirName = './target'
 displayName = "blogAPI"
 description = "API for blog functionality"
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+
 
